@@ -31,12 +31,16 @@
 
         <!-- Отзывы -->
         <TestimonialsSection />
+
+        <!-- Финальная CTA -->
+        <FinalCTASection />
       </main>
 
-      <!-- Футер -->
-      <footer class="text-center py-8 border-t border-light-bg-card dark:border-dark-border text-sm text-light-text-secondary dark:text-dark-text-secondary">
-        <p>© 2026 СочиНяшка. Все права защищены.</p>
-      </footer>
+      <!-- Footer -->
+      <AppFooter />
+
+      <!-- Sticky CTA -->
+      <StickyCTA />
     </div>
   </div>
 </template>
