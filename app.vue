@@ -11,17 +11,11 @@
         <!-- Hero-секция -->
         <HeroSection />
 
-        <!-- Placeholder для будущих секций -->
-        <section id="how-it-works" class="min-h-screen flex items-center justify-center bg-light-bg-alt dark:bg-dark-bg-alt">
-          <div class="text-center p-8">
-            <h2 class="font-heading font-bold text-h1 mb-4 text-light-text dark:text-dark-text">
-              Как это работает?
-            </h2>
-            <p class="text-lg text-light-text-secondary dark:text-dark-text-secondary">
-              Эта секция будет реализована в следующей итерации
-            </p>
-          </div>
-        </section>
+        <!-- Секция возможностей -->
+        <FeaturesSection />
+
+        <!-- Секция "Как это работает" -->
+        <HowItWorksSection />
       </main>
 
       <!-- Футер -->
