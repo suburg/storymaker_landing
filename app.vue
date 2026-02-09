@@ -22,6 +22,15 @@
 
         <!-- Галерея историй -->
         <GallerySection />
+
+        <!-- Секция безопасности -->
+        <SafetySection />
+
+        <!-- FAQ -->
+        <FAQSection />
+
+        <!-- Отзывы -->
+        <TestimonialsSection />
       </main>
 
       <!-- Футер -->
