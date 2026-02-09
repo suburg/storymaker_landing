@@ -26,7 +26,8 @@
               href="https://t.me/SochiNyashkaBot"
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-primary to-secondary text-white font-heading font-bold text-base rounded-button shadow-card hover:shadow-card-hover hover:scale-105 active:scale-100 transition-all duration-300 whitespace-nowrap"
+              class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-primary to-secondary text-white font-heading font-bold text-base rounded-button shadow-card hover:shadow-card-hover hover:scale-105 active:scale-100 transition-all duration-300 whitespace-nowrap focus:outline-none focus-visible:ring-4 focus-visible:ring-primary focus-visible:ring-offset-2"
+              aria-label="Начать использовать бота СочиНяшка в Telegram"
             >
               Начать в Telegram 🚀
             </a>

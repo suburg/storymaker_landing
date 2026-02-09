@@ -45,11 +45,12 @@
 
       <!-- Кнопка -->
       <button 
-        class="text-primary dark:text-primary-light font-medium text-sm sm:text-base hover:underline flex items-center gap-2"
+        class="text-primary dark:text-primary-light font-medium text-sm sm:text-base hover:underline flex items-center gap-2 focus:outline-none focus-visible:ring-4 focus-visible:ring-primary/30 rounded-lg p-1 -ml-1"
         @click.stop="handleClick"
+        :aria-label="`Читать отрывок истории ${title}`"
       >
         Читать отрывок
-        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
         </svg>
       </button>

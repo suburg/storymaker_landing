@@ -68,7 +68,7 @@
 
           <!-- Правая колонка: Hero-иллюстрация -->
           <div class="flex justify-center lg:justify-end">
-            <div class="relative w-full max-w-md lg:max-w-lg">
+            <div class="relative w-full max-w-md lg:max-w-lg" role="img" aria-label="Иллюстрация медвежонка СочиНяшка с волшебными элементами сказок">
               
               <!-- Основная иллюстрация (placeholder с эмодзи) -->
               <div class="relative animate-float">
@@ -111,10 +111,11 @@
     <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
       <a 
         href="#how-it-works"
-        class="flex flex-col items-center gap-2 text-light-text-secondary dark:text-dark-text-secondary hover:text-primary dark:hover:text-primary-light transition-colors"
+        class="flex flex-col items-center gap-2 text-light-text-secondary dark:text-dark-text-secondary hover:text-primary dark:hover:text-primary-light transition-colors focus:outline-none focus-visible:ring-4 focus-visible:ring-primary/30 rounded-lg p-2"
+        aria-label="Перейти к разделу 'Как это работает'"
       >
         <span class="text-sm font-medium">Узнать больше</span>
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
         </svg>
       </a>

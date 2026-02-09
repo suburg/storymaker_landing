@@ -5,7 +5,7 @@
     :target="href ? '_blank' : undefined"
     :rel="href ? 'noopener noreferrer' : undefined"
     :class="buttonClasses"
-    class="inline-flex items-center justify-center gap-2 font-heading font-bold transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-primary/30"
+    class="inline-flex items-center justify-center gap-2 font-heading font-bold transition-all duration-300 focus:outline-none focus-visible:ring-4 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-light-bg dark:focus-visible:ring-offset-dark-bg"
   >
     <slot></slot>
   </component>

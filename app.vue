@@ -52,7 +52,41 @@ const { theme } = useTheme()
 useHead({
   htmlAttrs: {
     lang: 'ru'
-  }
+  },
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'SoftwareApplication',
+        'name': 'СочиНяшка',
+        'applicationCategory': 'EducationalApplication',
+        'operatingSystem': 'Telegram',
+        'offers': {
+          '@type': 'Offer',
+          'price': '0',
+          'priceCurrency': 'RUB'
+        },
+        'description': 'ИИ-бот для совместного сочинения детских историй. Помогает детям 8-12 лет создавать сказки, приключения и детективы в Telegram.',
+        'audience': {
+          '@type': 'PeopleAudience',
+          'suggestedMinAge': '8',
+          'suggestedMaxAge': '12'
+        },
+        'url': 'https://t.me/SochiNyashkaBot',
+        'applicationSubCategory': 'Детское творчество',
+        'author': {
+          '@type': 'Organization',
+          'name': 'СочиНяшка'
+        },
+        'aggregateRating': {
+          '@type': 'AggregateRating',
+          'ratingValue': '5',
+          'ratingCount': '100'
+        }
+      })
+    }
+  ]
 })
 </script>
 

@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   
   // Модули
-  modules: ['@nuxtjs/tailwindcss'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxt/image'],
   
   // SSG конфигурация
   ssr: true,
@@ -29,13 +29,35 @@ export default defineNuxtConfig({
         },
         // Цвет темы для mobile browsers
         { name: 'theme-color', content: '#6366F1' },
-        { name: 'msapplication-TileColor', content: '#6366F1' }
+        { name: 'msapplication-TileColor', content: '#6366F1' },
+        
+        // Open Graph мета-теги
+        { property: 'og:type', content: 'website' },
+        { property: 'og:title', content: 'СочиНяшка — ИИ-бот для создания детских историй в Telegram' },
+        { 
+          property: 'og:description', 
+          content: 'Telegram-бот для детей 8-12 лет. Сочиняйте сказки, приключения и детективы вместе с умным ИИ-помощником. Бесплатно и безопасно.' 
+        },
+        { property: 'og:url', content: 'https://socinyashka.ru' },
+        { property: 'og:image', content: 'https://socinyashka.ru/og-image.png' },
+        { property: 'og:image:width', content: '1200' },
+        { property: 'og:image:height', content: '630' },
+        { property: 'og:locale', content: 'ru_RU' },
+        
+        // Twitter Card мета-теги
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:title', content: 'СочиНяшка — ИИ-бот для создания детских историй' },
+        { 
+          name: 'twitter:description', 
+          content: 'Сочиняйте сказки, приключения и детективы вместе с умным ИИ-помощником в Telegram. Для детей 8-12 лет.' 
+        },
+        { name: 'twitter:image', content: 'https://socinyashka.ru/og-image.png' }
       ],
       link: [
-        // Favicon - основной
+        // Favicon
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
-        { rel: 'icon', type: 'image/png', sizes: '96x96', href: '/favicon-96x96.png' },
+        { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
+        { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
         
         // Apple Touch Icon
         { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
@@ -56,6 +78,12 @@ export default defineNuxtConfig({
         {
           rel: 'stylesheet',
           href: 'https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Inter:wght@400;500;600&display=swap'
+        },
+        // Preload критических шрифтов
+        {
+          rel: 'preload',
+          href: 'https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap',
+          as: 'style'
         }
       ]
     }
@@ -65,5 +93,19 @@ export default defineNuxtConfig({
   tailwindcss: {
     cssPath: '~/assets/css/tailwind.css',
     configPath: 'tailwind.config.ts'
+  },
+  
+  // Nuxt Image конфигурация
+  image: {
+    format: ['webp', 'png', 'jpg'],
+    quality: 80,
+    screens: {
+      xs: 320,
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+      xxl: 1536
+    }
   }
 })

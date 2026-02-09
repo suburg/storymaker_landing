@@ -12,6 +12,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxt/image": "^2.0.0",
     "nuxt": "^3.13.0",
     "vue": "^3.4.0"
   },

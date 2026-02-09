@@ -1,0 +1,11 @@
+# robots.txt для СочиНяшка Landing Page
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://socinyashka.ru/sitemap.xml
+
+# Запрет индексации служебных файлов
+Disallow: /api/
+Disallow: /_nuxt/

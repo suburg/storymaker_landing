@@ -2,9 +2,11 @@
   <div class="border-b border-light-bg-card dark:border-dark-border">
     <!-- Вопрос (кнопка) -->
     <button
-      class="w-full py-5 sm:py-6 flex items-center justify-between gap-4 text-left hover:text-primary dark:hover:text-primary-light transition-colors"
+      :id="`faq-button-${question.slice(0, 20)}`"
+      class="w-full py-5 sm:py-6 flex items-center justify-between gap-4 text-left hover:text-primary dark:hover:text-primary-light transition-colors focus:outline-none focus-visible:ring-4 focus-visible:ring-primary/30 rounded-lg"
       @click="toggle"
       :aria-expanded="isOpen"
+      :aria-controls="`faq-answer-${question.slice(0, 20)}`"
     >
       <span class="font-heading font-semibold text-lg sm:text-xl text-light-text dark:text-dark-text">
         {{ question }}
@@ -33,7 +35,10 @@
     >
       <div 
         v-show="isOpen"
+        :id="`faq-answer-${question.slice(0, 20)}`"
         class="overflow-hidden"
+        role="region"
+        :aria-labelledby="`faq-button-${question.slice(0, 20)}`"
       >
         <div class="pb-5 sm:pb-6 pr-12">
           <p class="text-base sm:text-lg text-light-text-secondary dark:text-dark-text-secondary leading-relaxed">

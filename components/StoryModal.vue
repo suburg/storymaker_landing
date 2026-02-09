@@ -25,14 +25,18 @@
         >
           <div 
             v-if="isOpen && story"
+            role="dialog"
+            aria-modal="true"
+            :aria-labelledby="`story-title-${story.id}`"
             class="relative bg-light-bg dark:bg-dark-bg rounded-card shadow-card-hover max-w-2xl w-full max-h-[90vh] overflow-y-auto"
             @click.stop
           >
             <!-- Кнопка закрытия -->
             <button 
-              class="absolute top-4 right-4 sm:top-6 sm:right-6 w-10 h-10 rounded-full bg-light-bg-card dark:bg-dark-bg-card hover:bg-light-bg-alt dark:hover:bg-dark-bg-alt flex items-center justify-center transition-colors z-10"
+              class="absolute top-4 right-4 sm:top-6 sm:right-6 w-10 h-10 rounded-full bg-light-bg-card dark:bg-dark-bg-card hover:bg-light-bg-alt dark:hover:bg-dark-bg-alt flex items-center justify-center transition-colors z-10 focus:outline-none focus-visible:ring-4 focus-visible:ring-primary/30"
               @click="closeModal"
-              aria-label="Закрыть"
+              aria-label="Закрыть модальное окно"
+              title="Закрыть"
             >
               <svg class="w-6 h-6 text-light-text dark:text-dark-text" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -42,7 +46,10 @@
             <!-- Контент -->
             <div class="p-6 sm:p-8 lg:p-10">
               <!-- Заголовок -->
-              <h3 class="font-heading font-bold text-2xl sm:text-3xl lg:text-4xl mb-3 text-light-text dark:text-dark-text pr-12">
+              <h3 
+                :id="`story-title-${story.id}`"
+                class="font-heading font-bold text-2xl sm:text-3xl lg:text-4xl mb-3 text-light-text dark:text-dark-text pr-12"
+              >
                 {{ story.title }}
               </h3>
 

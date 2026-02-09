@@ -25,11 +25,12 @@
         <!-- Переключатель темы -->
         <button 
           @click="toggleTheme"
-          class="p-2.5 sm:p-3 rounded-xl bg-light-bg-card dark:bg-dark-bg-card hover:scale-105 active:scale-95 transition-all shadow-card hover:shadow-card-hover"
-          aria-label="Переключить тему"
+          class="p-2.5 sm:p-3 rounded-xl bg-light-bg-card dark:bg-dark-bg-card hover:scale-105 active:scale-95 transition-all shadow-card hover:shadow-card-hover focus:outline-none focus-visible:ring-4 focus-visible:ring-primary/30"
+          :aria-label="theme === 'light' ? 'Переключить на тёмную тему' : 'Переключить на светлую тему'"
+          :title="theme === 'light' ? 'Переключить на тёмную тему' : 'Переключить на светлую тему'"
         >
-          <span v-if="theme === 'light'" class="text-xl sm:text-2xl">🌙</span>
-          <span v-else class="text-xl sm:text-2xl">☀️</span>
+          <span v-if="theme === 'light'" class="text-xl sm:text-2xl" aria-hidden="true">🌙</span>
+          <span v-else class="text-xl sm:text-2xl" aria-hidden="true">☀️</span>
         </button>
       </div>
     </div>

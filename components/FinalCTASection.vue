@@ -29,7 +29,8 @@
               href="https://t.me/SochiNyashkaBot"
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center justify-center gap-3 px-10 py-5 bg-white text-primary font-heading font-bold text-lg sm:text-xl rounded-button shadow-card-hover hover:scale-105 active:scale-100 transition-all duration-300 min-w-[280px] sm:min-w-[320px]"
+              class="inline-flex items-center justify-center gap-3 px-10 py-5 bg-white text-primary font-heading font-bold text-lg sm:text-xl rounded-button shadow-card-hover hover:scale-105 active:scale-100 transition-all duration-300 min-w-[280px] sm:min-w-[320px] focus:outline-none focus-visible:ring-4 focus-visible:ring-white/50"
+              aria-label="Начать использовать бота СочиНяшка в Telegram"
             >
               Начать в Telegram 🚀
             </a>
@@ -39,7 +40,8 @@
               href="https://t.me/SochiNyashkaBot"
               target="_blank"
               rel="noopener noreferrer"
-              class="text-white/90 hover:text-white font-medium transition-colors"
+              class="text-white/90 hover:text-white font-medium transition-colors focus:outline-none focus-visible:ring-4 focus-visible:ring-white/30 rounded-lg px-2 py-1"
+              aria-label="Перейти к боту СочиНяшка в Telegram"
             >
               @SochiNyashkaBot
             </a>
@@ -48,24 +50,14 @@
           <!-- QR-код -->
           <div class="flex flex-col items-center gap-3">
             <div class="bg-white p-4 rounded-card shadow-card-hover">
-              <!-- Визуальный placeholder для QR-кода -->
-              <div class="w-40 h-40 sm:w-44 sm:h-44 bg-light-bg-card dark:bg-dark-bg-card rounded flex flex-col items-center justify-center gap-3 border-4 border-light-text/10">
-                <svg class="w-20 h-20 text-light-text/40" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M3 11h8V3H3v8zm2-6h4v4H5V5zm8-2v8h8V3h-8zm6 6h-4V5h4v4zM3 21h8v-8H3v8zm2-6h4v4H5v-4zm13-2h3v3h-3v-3zm0 4h3v3h-3v-3zm-5 0h3v6h-3v-6zm5-9h3v3h-3V8z"/>
-                </svg>
-                <p class="text-xs font-bold text-light-text/60 text-center px-2">
-                  SCAN ME
-                </p>
-              </div>
-              <!-- Если хотите использовать реальный QR-код, замените div выше на:
               <img 
                 src="/images/qr-code.png" 
-                alt="QR-код для быстрого доступа к боту"
+                alt="QR-код для быстрого доступа к Telegram-боту СочиНяшка. Отсканируйте камерой телефона для открытия бота"
                 class="w-40 h-40 sm:w-44 sm:h-44"
                 width="176"
                 height="176"
+                loading="lazy"
               />
-              -->
             </div>
             <p class="text-sm sm:text-base text-white/80 font-medium">
               Сканируй и начинай!
